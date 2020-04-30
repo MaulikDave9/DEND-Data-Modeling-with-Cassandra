@@ -1,21 +1,22 @@
 # DEND-Data-Modeling-with-Cassandra
 
-(1) Process original event csv data files to create the data file csv that will be used for Apache Casssandra tables:
-    Name of the file: event_datafile_new.csv
-    Columns of the file: []
-    Total Number of Rows: 8056
-    Event data row sample:['Stephen Lynch', 'Logged In', 'Jayden', 'M', '0', 'Bell', '182.85669', 'free', 'Dallas-Fort Worth-Arlington, TX', 'PUT', 'NextSong', '1.54099E+12', '829', "Jim
-                           Henson's Dead", '200', '1.54354E+12', '91']
+Sparkify startup aims to analyze the song and user activity data on their new music streaming app.
+Apache Cassandra database is created to support that goal where data modeling is done using Apache Cassandra based on given queries and ETL pipeline using Python.
 
-(2) columns of event_datafile_new.csv
-    artist
-    firstName of user
-    gender of user
-    item number in session
-    last name of user
-    length of the song
-    level (paid or free song)
-    location of the user
-    sessionId
-    song title
-    userId
+## Dataset
+
+Dataset is in the directory event_data, it has CSV files partitioned by date.
+Example of files in the dataset:
+
+    event_data/2018-11-01-events.csv
+    event_data/2018-11-02-events.csv
+
+## New CSV file for Apache Cassandra Tables
+Processing the CSV files from the event_data directory, new CSV file was created as event_datafile_new.csv. This will be used
+for Apache Cassandra tables.
+   ![event datafile new Image](images/image_event_datafile_new.jpg)
+
+## Tables
+
+## To Run
+1. Project_1B_Project_Template.ipynb - Jupyter notebook to execute the code
