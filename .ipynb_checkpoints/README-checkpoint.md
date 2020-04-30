@@ -5,7 +5,7 @@ Apache Cassandra database is created to support that goal where data modeling is
 
 ## Dataset
 
-Dataset is in the directory event_data, it has CSV files partitioned by date.
+Dataset is in the directory *event_data*. It consists of CSV files partitioned by date.
 Example of files in the dataset:
 
     event_data/2018-11-01-events.csv
@@ -13,8 +13,8 @@ Example of files in the dataset:
 
 ## New CSV file for Apache Cassandra Tables
 
-Processing the CSV files from the event_data directory, new CSV file was created as event_datafile_new.csv within the workdspace directory. 
-This will be used for Apache Cassandra tables.  
+Processing the CSV files from the *event_data* directory, new CSV file is created within the workspace directory: *event_datafile_new.csv*  
+This new CSV file will be used for Apache Cassandra tables.  
 
 The image below is how denormalized data should appear.  
 
@@ -24,18 +24,19 @@ The image below is how denormalized data should appear.
 
 Apache Cassandra the database tables are modeled based on the queries.
 
-1. Query: Give the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
+1. *Query*: Give the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
 
-   Table: artist_song_item_sessionid
+   *Table*: artist_song_item_sessionid
+   
         sessionId int, 
         itemInSession int, 
         artist text, 
         song text, 
         length float
  
-    Primary Key: (sessionId, itemInSession), sessionId is partition key and itemInSession cluster key.
-    
-    sessionId determines rows with particular id and itemInSession further sorts those rows for retrieval. 
+    *Primary Key*: (sessionId, itemInSession)
+        sessionId is partition key and itemInSession cluster key.
+        sessionId determines rows with particular id and itemInSession further sorts those rows for retrieval. 
 
 2. Give only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
 
