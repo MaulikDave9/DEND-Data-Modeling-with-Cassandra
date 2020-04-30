@@ -15,7 +15,6 @@ Example of files in the dataset:
 
 Processing the CSV files from the *event_data* directory, new CSV file is created within the workspace directory: *event_datafile_new.csv*  
 This new CSV file will be used for Apache Cassandra tables.  
-
 The image below is how denormalized data should appear.  
 
    ![event datafile new Image](images/image_event_datafile_new.jpg)
@@ -28,13 +27,13 @@ Apache Cassandra the database tables are modeled based on the queries.
 
    *Table*: artist_song_item_sessionid
    
-        Column | Datatype
-        -------|---------
-        sessionId | int, 
-        itemInSession | int, 
-        artist | text, 
-        song | text, 
-        length | float
+        |Column | Datatype|
+        |-------|---------|
+        | sessionId | int  | 
+        | itemInSession | int| 
+        | artist | text | 
+        | song | text | 
+        | length | float |
  
     *Primary Key*: (sessionId, itemInSession)
     
@@ -45,15 +44,15 @@ Apache Cassandra the database tables are modeled based on the queries.
 
     *Table*: artist_song_for_user_by_session
 
-        Column | Datatype
-        -------|---------
-        userId | int
-        sessionId | int
-        itemInSession | int
-        artist | text
-        song | text
-        firstName | text
-        lastName | text
+        | Column | Datatype |
+        |-------|---------|
+        |userId | int |
+        |sessionId | int|
+        |itemInSession | int|
+        |artist | text|
+        |song | text|
+        |firstName | text|
+        |lastName | text|
         
      *Primary Key*:  ((userId, sessionId), itemInSession))
      
@@ -64,12 +63,12 @@ Apache Cassandra the database tables are modeled based on the queries.
 
     *Table*: users_listened_song
     
-        Column | Datatype
-        -------|---------
-        song | text
-        userId | int
-        firstName | text
-        lastName | text
+        |Column | Datatype|
+        |-------|---------
+        |song | text|
+        |userId | int|
+        |firstName | text|
+        |lastName | text|
         
      *Primary Key*: song, userID
      
