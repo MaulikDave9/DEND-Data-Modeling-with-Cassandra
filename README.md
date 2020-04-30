@@ -27,10 +27,10 @@ Apache Cassandra the database tables are modeled based on the queries.
 
    *Table*: artist_song_item_sessionid
    
-        |Column | Datatype|
-        |-------|---------|
+        | Column | Datatype |
+        | ------- | --------- |
         | sessionId | int  | 
-        | itemInSession | int| 
+        | itemInSession | int | 
         | artist | text | 
         | song | text | 
         | length | float |
@@ -45,14 +45,14 @@ Apache Cassandra the database tables are modeled based on the queries.
     *Table*: artist_song_for_user_by_session
 
         | Column | Datatype |
-        |-------|---------|
-        |userId | int |
-        |sessionId | int|
-        |itemInSession | int|
-        |artist | text|
-        |song | text|
-        |firstName | text|
-        |lastName | text|
+        | ------- | --------- |
+        | userId | int |
+        | sessionId | int |
+        | itemInSession | int |
+        | artist | text |
+        | song | text |
+        | firstName | text |
+        | lastName | text |
         
      *Primary Key*:  ((userId, sessionId), itemInSession))
      
@@ -63,12 +63,12 @@ Apache Cassandra the database tables are modeled based on the queries.
 
     *Table*: users_listened_song
     
-        |Column | Datatype|
-        |-------|---------
-        |song | text|
-        |userId | int|
-        |firstName | text|
-        |lastName | text|
+        | Column | Datatype |
+        | ------- | --------- |
+        | song | text |
+        | userId | int |
+        | firstName | text |
+        | lastName | text |
         
      *Primary Key*: song, userID
      
